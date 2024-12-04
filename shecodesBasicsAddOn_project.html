@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking</title>
+  </head>
+  <style>
+    body {
+      background-color: bisque;
+      display: block;
+      margin: 0 auto;
+    }
+    img {
+      padding: 25px;
+      border-radius: 35px;
+      display: block;
+
+    }
+
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      margin: 30px;
+    }
+    footer {
+      display: block;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+    .theme {
+      background-color:black;
+      color: white;
+      margin-top: 10px;
+      margin-bottom:10px;
+    }
+    p{
+        font-size: larger;
+        line-height:1.55;
+    }
+    .theme:hover {
+      color: black;
+      background-color: white;
+    }
+    .container {
+      width:50%;
+      background: white;
+      padding-left: 10px;
+      padding-right:30px;
+      margin: 10px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 15px;
+    }
+    button {
+      color: 5px solid
+        radial-gradient(
+          circle at 10% 20%,
+          rgb(230, 255, 165) 0%,
+          rgb(255, 230, 182) 100%
+        );
+      background: white;
+      font-size: 15px;
+      border-radius: 6px;
+      padding: 10px;
+      transition: all 150ms ease-in-out;
+      display: block;
+      margin: auto;
+     
+      
+    }
+    button:hover {
+      
+      cursor: pointer;
+    }
+    .link{
+      transition: all 150ms ease-in-out;
+      width: 60%;
+      display: block;
+      margin:0 auto;
+      border-color: burlywood;
+      border: 5px solid;
+
+    }
+    .link:hover{
+        filter: contrast(80%);
+        transform: scale(1.1);
+    }
+    footer{
+        text-align: center;
+        margin: 5px;
+    }
+    .img-container{
+        margin:15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap:5px;
+        
+       
+    }
+    .image{
+      transition: all 200ms ease-in-out ;
+      width:70%;
+      height:70%;
+      
+
+    }
+    .image:hover{
+     transform: scale(2);
+     border-color: #fff;
+    }
+    .dark{
+      background:linear-gradient(179.4deg, rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+      color: white;
+    }
+    .dark .container{
+
+      background: rgba(255,255,255,0.1);
+    }
+    a{
+      color: burlywood;
+
+    }
+    .button2{
+      background-color:burlywood;
+      border-width: 0px;
+      color: #fff;
+    }
+   
+  </style>
+  <body>
+    <button class="theme">Dark Mode</button>
+    <div class="container">
+      <h1>Cooking🧑‍🍳</h1>
+      <h2>My favourite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Cooking">
+        <img  class="link"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/865/original/WhatsApp_Image_2024-07-22_at_11.03.35_PM.jpeg?1721670129"
+        />
+      </a>
+      <div class="img-container">
+      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/049/original/WhatsApp_Image_2024-07-23_at_9.16.38_PM.jpeg?1721749639"
+       class="image"/>
+      <img class="image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/863/original/WhatsApp_Image_2024-07-22_at_11.00.22_PM.jpeg?1721670011"
+      />
+      <img class="image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/134/862/original/WhatsApp_Image_2024-07-22_at_10.55.09_PM.jpeg?1721669994"
+      />
+      <img class="image"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/135/045/original/WhatsApp_Image_2024-07-23_at_8.36.52_PM.jpeg?1721747245"
+      />
+      </div>
+      <p>
+        Cooking brings joy and creativity to the kitchen. Imagine transforming
+        simple ingredients into delicious dishes that bring smiles to your loved
+        ones. Cooking connects cultures, as you can explore the world through
+        different cuisines without leaving home. The aroma of fresh herbs, the
+        sizzle of a pan, and the satisfaction of a well-cooked meal are truly
+        magical experiences. Plus, cooking at home allows you to create
+        healthier, customized meals that nourish both body and soul.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Cooking"
+        >Read more about cooking</a
+      >
+      <br />
+      <button class="button2">Learn more About your Fav dish</button>
+     <footer>
+        "Coded with 🩵 by"
+        <a href="https://www.shecodes.io" target="_blank">Pravallika</a>
+      </footer> 
+    </div>
+    
+      <script>
+        function Learn(){
+          
+          let ans=prompt("Are you intrested in learning cooking?");
+          if ((ans==="yes")||(ans==="YES")||(ans==="Yes")){
+           alert("Then provide us with some details");
+          let name=prompt("what is your name?");
+          let mail=prompt("what is your email?");
+          alert("we will keep in touch with you through your mail,Bye!👋"+name);
+          }
+          else{
+            alert("If you change your mind, make sure to reach us!!")
+          }
+        }
+        function changeTheme(){
+          
+          let body=document.querySelector("body");
+          
+           (body.classList.toggle("dark"));
+           
+        }
+        let themeButton=document.querySelector(".theme")
+        themeButton.addEventListener("click",changeTheme)
+        let LearnButton=document.querySelector(".button2");
+        LearnButton.addEventListener("click",Learn)
+      </script>
+  </body>
+</html>
